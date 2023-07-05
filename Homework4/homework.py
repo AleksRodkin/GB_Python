@@ -125,7 +125,7 @@ print(bush := [randint(0, 10) for _ in range(size_1)])
 max_count = 0
 
 for i in range(size_1):
-  current_bushes = bush[(i-1)%size_1] + bush[(i)%size_1] + [(i+1)%size_1]
+  current_bushes = bush[(i-1)%size_1] + bush[(i)%size_1] + bush[(i+1)%size_1]
   if current_bushes > max_count:
     max_count = current_bushes
 
