@@ -102,3 +102,31 @@ print()
 sleep(2)
 print("*** Ну вот и всё, ребята! ***")
 print()
+
+
+
+
+# Второй вариант решения первой задачи
+
+size_1, size_2 = int(input('Размер первого: ')), int(input('Размер второго: '))
+print(first := set([randint(0, 10) for _ in range(size_1)]))
+print(second := set([randint(0, 10) for _ in range(size_2)]))
+
+print(sorted(first.intersection(second)))
+# или
+print(sorted(first & second))
+
+
+# Второй вариант решения второй задачи
+
+size_1 = int(input('Количество кустов: '))
+print(bush := [randint(0, 10) for _ in range(size_1)])
+
+max_count = 0
+
+for i in range(size_1):
+  current_bushes = bush[(i-1)%size_1] + bush[(i)%size_1] + [(i+1)%size_1]
+  if current_bushes > max_count:
+    max_count = current_bushes
+
+print(max_count)
